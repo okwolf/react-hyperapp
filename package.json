@@ -1,9 +1,8 @@
 {
   "name": "react-hyperapp",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Hyperapp as a React component",
   "main": "dist/react-hyperapp.js",
-  "module": "src/index.js",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/okwolf/react-hyperapp.git"
