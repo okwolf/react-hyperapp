@@ -1,0 +1,37 @@
+{
+  "name": "react-hyperapp",
+  "version": "0.1.0",
+  "description": "Hyperapp as a React component",
+  "main": "dist/react-hyperapp.js",
+  "module": "src/index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/okwolf/react-hyperapp.git"
+  },
+  "peerDependencies": {
+    "hyperapp": "^1.1.2"
+  },
+  "devDependencies": {
+    "babel-core": "^6.26.0",
+    "babel-plugin-transform-object-rest-spread": "^6.26.0",
+    "babel-preset-env": "^1.6.1",
+    "hyperapp": "^1.1.2",
+    "rollup": "^0.56.5",
+    "rollup-plugin-babel": "^3.0.3",
+    "uglify-js": "^3.3.14"
+  },
+  "scripts": {
+    "clean": "npx rimraf coverage dist node_modules",
+    "bundle": "rollup -c",
+    "minify": "uglifyjs dist/react-hyperapp.js -o dist/react-hyperapp.js -mc --source-map includeSources,url=react-hyperapp.js.map",
+    "build": "npm run bundle && npm run minify",
+    "prepare": "npm run build",
+    "release": "./pre-flight-tests && npm run clean && npm i && git tag $npm_package_version && git push && git push --tags && npm publish"
+  },
+  "author": "Wolfgang Wedemeyer <wolf@okwolf.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/okwolf/react-hyperapp/issues"
+  },
+  "homepage": "https://github.com/okwolf/react-hyperapp"
+}
